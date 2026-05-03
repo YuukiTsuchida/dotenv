@@ -26,5 +26,9 @@ IF NOT EXIST "%CONFIG_DIR%\wezterm" (
     mklink /D "%CONFIG_DIR%\wezterm" "%~dp0\wezterm"
 )
 
+if NOT EXIST "%CONFIG_DIR%\starship.toml" (
+    echo Creating symbolic link for starship configuration
+    mklink "%CONFIG_DIR%\starship.toml" "%~dp0\starship\starship.toml"
+)
 
 pause
