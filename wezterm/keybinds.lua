@@ -42,6 +42,11 @@ local keybinds = {
 
     { key = 'U', mods = 'CTRL', action = act.CharSelect{ copy_on_select = true, copy_to =  'ClipboardAndPrimarySelection' } },
     { key = 'U', mods = 'SHIFT|CTRL', action = act.CharSelect{ copy_on_select = true, copy_to =  'ClipboardAndPrimarySelection' } },
+
+    { key = 'h', mods = 'SHIFT|CTRL', action = act.ActivatePaneDirection 'Left' },
+    { key = 'l', mods = 'SHIFT|CTRL', action = act.ActivatePaneDirection 'Right' },
+    { key = 'k', mods = 'SHIFT|CTRL', action = act.ActivatePaneDirection 'Up' },
+    { key = 'j', mods = 'SHIFT|CTRL', action = act.ActivatePaneDirection 'Down' },
   },
 
   key_tables = {
