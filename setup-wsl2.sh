@@ -10,6 +10,12 @@ if [ ! -d "$CONFIG_DIR" ]; then
   mkdir -p "$CONFIG_DIR"
 fi
 
+if [ ! -d "$CONFIG_DIR/wezterm" ]; then
+  echo "Creating symbolic link for wezterm"
+  ln -s "$SCRIPT_DIR/wezterm" "$CONFIG_DIR/wezterm"
+fi
+
+
 if [ ! -L "$CONFIG_DIR/starship.toml" ]; then
   echo "Creating symbolic link for starship.toml"
   ln -s "$SCRIPT_DIR/starship/starship.toml" "$CONFIG_DIR/starship.toml"
